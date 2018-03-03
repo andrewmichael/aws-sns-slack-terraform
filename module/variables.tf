@@ -35,3 +35,8 @@ variable "lambda_iam_policy_name" {
   type = "string"
   default = "lambda-sns-to-slack-policy"
 }
+
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  default     = {}
+}

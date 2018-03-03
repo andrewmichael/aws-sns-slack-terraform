@@ -19,4 +19,6 @@ resource "aws_lambda_function" "sns_to_slack" {
       DEFAULT_EMOJI = "${var.default_emoji}"
     }
   }
+
+  tags = "${var.tags}"
 }

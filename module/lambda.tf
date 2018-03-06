@@ -9,6 +9,8 @@ resource "aws_lambda_function" "sns_to_slack" {
   handler = "lambda_function.lambda_handler"
   source_code_hash = "${base64sha256(file("${path.module}/lambda/sns-to-slack.zip"))}"
   runtime = "python2.7"
+  description      = "Managed by Terraform"
+  timeout          = "60"
 
   environment {
     variables = {
